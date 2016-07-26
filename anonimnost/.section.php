@@ -1,0 +1,6 @@
+<?
+$sSectionName = "Анонимность";
+$arDirProperties = Array(
+
+);
+?>

@@ -1,0 +1,122 @@
+
+
+/* Start:/bitrix/templates/.default/components/bitrix/breadcrumb/breadcrumbs/style.css?1469174284563*/
+.bx-breadcrumb {
+	margin: 10px 0;
+}
+.bx-breadcrumb i {
+	color: #b5bdc2;
+	line-height: 13px;
+	font-size: 12px;
+	vertical-align: middle;
+	margin-right: 5px;
+}
+.bx-breadcrumb .bx-breadcrumb-item {
+	float: left;
+	margin-bottom: 10px;
+	white-space: nowrap;
+	line-height: 13px;
+	vertical-align: middle;
+	margin-right: 10px;
+}
+.bx-breadcrumb .bx-breadcrumb-item span {
+	font-family: "Open Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 13px;
+}
+.bx-breadcrumb .bx-breadcrumb-item a {border-bottom: none;}
+.bx-breadcrumb .bx-breadcrumb-item a:hover {}
+
+/* End */
+
+
+/* Start:/bitrix/templates/.default/components/bitrix/catalog/catalog/style.css?1469174285697*/
+.grid{}
+.grid .bx_content_section{
+	margin-bottom: 15px;
+}
+.grid .bx_sidebar{
+	margin-bottom: 15px;
+}
+
+/* grid2x1 */
+.grid2x1{}
+.grid2x1 .bx_content_section{
+	float: left;
+	width: 66%;
+	margin-bottom: 15px;
+}
+.grid2x1 .bx_sidebar{
+	float: right;
+	width: 33%;
+	margin-bottom: 15px;
+	padding-left: 5%;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+}
+@media (max-width:960px){
+	.grid2x1 .bx_sidebar{
+		padding-left: 4%;
+	}
+}
+@media (max-width:640px) {
+	.grid2x1 .bx_content_section,
+	.grid2x1 .bx_sidebar{
+		width: 100%;
+		float: none;
+	}
+	.grid2x1 .bx_sidebar{
+		padding-left: 3%;
+	}
+}
+@media (max-width:479px){
+	.grid2x1 .bx_sidebar{
+		padding-left: 1%;
+	}
+
+}
+/* End */
+
+
+/* Start:/bitrix/components/bitrix/system.pagenavigation/templates/modern/style.css?1469174316745*/
+div.modern-page-navigation { 
+	padding: 0.5em 0;}
+div.modern-page-navigation a, 
+span.modern-page-current, 
+span.modern-page-dots
+{
+	border-left-width: 1px;
+	border-left-style: solid;
+	padding-left: 0.75em;
+	padding-right: 0.5em;
+	text-decoration: none;
+}
+div.modern-page-navigation a.modern-page-previous { 
+	border-right-width: 1px; 
+	border-right-style: solid; 
+	border-left: none; }
+div.modern-page-navigation a.modern-page-first, 
+div.modern-page-navigation span.modern-page-first { 
+	border-left: none; 
+	padding-left: 0.5em; }
+span.modern-page-current { 
+	font-weight: bold; }
+div.modern-page-navigation a, 
+span.modern-page-current, 
+div.modern-page-navigation a.modern-page-previous, 
+span.modern-page-dots { 
+	border-color: #cdcdcd; }
+
+/* End */
+
+
+/* Start:/bitrix/templates/.default/components/bitrix/catalog/catalog/bitrix/catalog.section/.default/style.css?146917428577*/
+.myText p{
+font-size: 16px !important;
+color: rgb(255, 255, 255)!important;
+}
+/* End */
+/* /bitrix/templates/.default/components/bitrix/breadcrumb/breadcrumbs/style.css?1469174284563 */
+/* /bitrix/templates/.default/components/bitrix/catalog/catalog/style.css?1469174285697 */
+/* /bitrix/components/bitrix/system.pagenavigation/templates/modern/style.css?1469174316745 */
+/* /bitrix/templates/.default/components/bitrix/catalog/catalog/bitrix/catalog.section/.default/style.css?146917428577 */

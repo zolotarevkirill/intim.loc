@@ -1,0 +1,59 @@
+Options -Indexes 
+ErrorDocument 404 /404.php
+
+<IfModule mod_php5.c>
+	php_flag allow_call_time_pass_reference 1
+	php_flag session.use_trans_sid off
+
+	#php_value display_errors 1
+
+	#php_value mbstring.internal_encoding UTF-8
+</IfModule>
+
+<IfModule mod_rewrite.c>
+	Options +FollowSymLinks
+	RewriteEngine On
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-l
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteCond %{REQUEST_FILENAME} !/bitrix/urlrewrite.php$
+	RewriteRule ^(.*)$ /bitrix/urlrewrite.php [L]
+	RewriteRule .* - [E=REMOTE_USER:%{HTTP:Authorization}]
+RewriteCond %{HTTP_HOST} ^mysecretplace.ru
+RewriteRule (.*) http://www.mysecretplace.ru/$1 [R=301,L]
+</IfModule>
+
+<IfModule mod_dir.c>
+	DirectoryIndex index.php index.html
+</IfModule>
+
+<IfModule mod_expires.c>
+	ExpiresActive on
+	ExpiresByType image/jpeg "access plus 3 day"
+	ExpiresByType image/gif "access plus 3 day"
+</IfModule>
+
+Redirect 301 /products/analnye-igrushki78/ /products/analnye-igrushki/
+Redirect 301 /products/analnye-igrushki78/vtulki48/ /products/analnye-igrushki78/vtulki/
+Redirect 301 /products/bdsm86/ /products/bdsm/
+Redirect 301 /products/duhi-s-feromonami68/ /products/duhi-s-feromonami/
+Redirect 301 /products/duhi-s-feromonami68/jenskie21/ /products/duhi-s-feromonami68/jenskie/
+Redirect 301 /products/falloimitatory73/ /products/falloimitatory/
+Redirect 301 /products/falloimitatory/realistiki/ /products/falloimitatory/realistiki/
+Redirect 301 /products/kolca-i-nasadki17/ /products/kolca-i-nasadki/
+Redirect 301 /products/kukly99/ /products/kukly/
+Redirect 301 /products/lubrikanty48/ /products/lubrikanty/
+Redirect 301 /products/massajnye-masla-i-svechi6/ /products/massajnye-masla-i-svechi/
+Redirect 301 /products/prezervativy29/ /products/prezervativy/
+Redirect 301 /products/realistiki12/ /products/realistiki/
+Redirect 301 /products/realistiki50/ /products/realistiki/
+Redirect 301 /products/strapony-i-falloprotezy21/ /products/strapony-i-falloprotezy/
+Redirect 301 /products/suveniry34/ /products/suveniry/
+Redirect 301 /products/vaginalnye-shariki9/ /products/vaginalnye-shariki/
+Redirect 301 /products/vaginy-i-masturbatory16/ /products/vaginy-i-masturbatory/
+Redirect 301 /products/vakuumnye-pompy31/ /products/vakuumnye-pompy/
+Redirect 301 /products/vibratory75/ /products/vibratory/
+Redirect 301 /products/vibratory75/realistiki12/ /products/vibratory/realistiki/
+Redirect 301 /products/vibratory75/so-stimulyaciey-klitora53/ /products/vibratory/so-stimulyaciey-klitora/
+Redirect 301 /products/vtulki48/ /products/vtulki/
+

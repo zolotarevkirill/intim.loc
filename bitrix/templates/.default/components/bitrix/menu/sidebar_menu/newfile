@@ -1,0 +1,65 @@
+<?php if ($arResult[$i]['IS_PARENT']): ?>
+
+
+
+                            <?php if (!$arResult[$i]["SELECTED"]): ?>            
+                                <div class="collapse" id="item<?= $i ?>">
+                                <?php endif; ?>   
+
+                                <ul>
+
+                                    <?php for ($j = ($i + 1); $j < count($arResult); $j++): ?>
+                                        <?php if ($arResult[$j]['DEPTH_LEVEL'] == 1): ?>
+                                            <?php break; ?>
+                                        <?php else: ?>
+                                            <li><a href="<?= $arResult[$j]['LINK'] ?>"><?= $arResult[$j]['TEXT'] ?></a></li>
+                                        <?php endif; ?>
+                                    <?php endfor; ?>
+
+                                    <?php if (!$arResult[$i]["SELECTED"]): ?>         
+                                        <li><a href="#item<?= $i ?>" class="collapsed" data-toggle="collapse">Свернуть <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a></li>
+                                            <?php endif; ?>   
+                                </ul>
+
+                                <?php if (!$arResult[$i]["SELECTED"]): ?>       
+                                </div>
+                            <?php endif; ?>                
+
+                        <?php endif; ?>    
+
+
+
+            <li>
+                <span class="arrow"><i class="fa fa-angle-down"></i></span>
+                <a href="#">Woman</a>
+                <ul class="children">
+                    <li>
+                        <a href="#">Sweaters & Knits
+                            <span class="count">12</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">Jackets & Coats
+                            <span class="count">12</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">Denim
+                            <span class="count">12</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">Pants
+                            <span class="count">12</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">Shorts
+                            <span class="count">12</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <li><a href="#">Sale Off</a></li>
+        </ul>

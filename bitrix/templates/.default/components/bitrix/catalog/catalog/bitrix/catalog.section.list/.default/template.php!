@@ -1,0 +1,69 @@
+<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
+/** @var array $arParams */
+/** @var array $arResult */
+/** @global CMain $APPLICATION */
+/** @global CUser $USER */
+/** @global CDatabase $DB */
+/** @var CBitrixComponentTemplate $this */
+/** @var string $templateName */
+/** @var string $templateFile */
+/** @var string $templateFolder */
+/** @var string $componentPath */
+/** @var CBitrixComponent $component */
+?>
+
+<?php $cnt = 0; ?>
+<?php $cnt2 = count($arResult["SECTIONS"]);?>
+<?php foreach ($arResult["SECTIONS"] as $sections): ?>
+        <?php
+        
+        
+        ?>
+        <?php if($sections["ELEMENT_CNT"] > 0):?>
+        <?php if ($cnt == 0): ?>
+        <div class="row">
+        <?php endif; ?>    
+        <?php $cnt++; ?>  
+        <?php
+        $db_list = CIBlockSection::GetList(
+                        Array(SORT => "ASC"), $arFilter = Array("IBLOCK_ID" => 5,
+                    "ID" => $sections["ID"]), true, $arSelect = Array("UF_*")
+        );
+        while ($ar_result = $db_list->GetNext()) {
+            $LABEL = $ar_result["UF_LABEL"];
+        }
+        ?>
+        <div class="col-xs-12 col-md-3 col-sm-3">
+            <div class="item">
+                <div class="outer">
+                    <a href="<?= $sections["SECTION_PAGE_URL"] ?>" class="holder">
+                    <?php if ($sections["PICTURE"]["SRC"]): ?>
+                            <img src="<?= $sections["PICTURE"]["SRC"] ?>" class="full-width" alt="">   
+                        <?php else: ?>
+                            <img src="<?php echo SITE_TEMPLATE_PATH . '/images/nophoto.jpg' ?>" class="full-width" alt="">
+                        <?php endif; ?>    
+                    </a>
+                        <?php if ($LABEL): ?>
+                        <div class="my-badge">
+                        <?= $LABEL ?>
+                        </div>    
+                        <?php endif; ?>
+                    <div class="inner">
+                        <!--<a href="#" data-toggle="modal" data-target=".modal-item">БЫСТРЫЙ ПРОСМОТР</a>-->
+                    </div>
+                </div>
+                <div>
+                    <p class="date text-center"><?= $sections["NAME"] ?></p>
+                    <p class="price text-center"><!--price--></p>
+                    <br>
+                </div>
+            </div>
+        </div>
+        <?php if ($cnt > 3 || $cnt2 == $cnt): ?>    
+        </div>
+            <?php $cnt = 0; ?>
+        <?php endif; ?> 
+
+    <?php endif;?>
+<?php endforeach; ?>
+

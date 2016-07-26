@@ -1,0 +1,83 @@
+<?php
+if($_POST['id'] == NULL || $_POST['section'] == NULL){
+    die();
+}
+require_once($_SERVER['DOCUMENT_ROOT'] . '/bitrix/modules/main/include/prolog_before.php');
+$id = $_POST['id'];
+$section = $_POST['section'];
+
+
+$APPLICATION->IncludeComponent(
+    "bitrix:catalog.element", "fast_view", Array(
+    "ACTION_VARIABLE" => "action",
+    "ADD_DETAIL_TO_SLIDER" => "N",
+    "ADD_ELEMENT_CHAIN" => "N",
+    "ADD_PICT_PROP" => "-",
+    "ADD_PROPERTIES_TO_BASKET" => "Y",
+    "ADD_SECTIONS_CHAIN" => "Y",
+    "BACKGROUND_IMAGE" => "-",
+    "BASKET_URL" => "/personal/basket.php",
+    "BRAND_USE" => "N",
+    "BROWSER_TITLE" => "-",
+    "CACHE_GROUPS" => "Y",
+    "CACHE_TIME" => "0",
+    "CACHE_TYPE" => "A",
+    "CHECK_SECTION_ID_VARIABLE" => "N",
+    "COMPONENT_TEMPLATE" => ".default",
+    "DETAIL_PICTURE_MODE" => "IMG",
+    "DETAIL_URL" => "",
+    "DISPLAY_COMPARE" => "N",
+    "DISPLAY_NAME" => "Y",
+    "DISPLAY_PREVIEW_TEXT_MODE" => "E",
+    "ELEMENT_CODE" => "",
+    "ELEMENT_ID" => $id,
+    "IBLOCK_ID" => "5",
+    "IBLOCK_TYPE" => "catalog",
+    "LABEL_PROP" => "-",
+    "LINK_ELEMENTS_URL" => "link.php?PARENT_ELEMENT_ID=#ELEMENT_ID#",
+    "LINK_IBLOCK_ID" => "",
+    "LINK_IBLOCK_TYPE" => "",
+    "LINK_PROPERTY_SID" => "",
+    "MESSAGE_404" => "",
+    "MESS_BTN_ADD_TO_BASKET" => "В корзину",
+    "MESS_BTN_BUY" => "Купить",
+    "MESS_BTN_COMPARE" => "Сравнить",
+    "MESS_BTN_SUBSCRIBE" => "Подписаться",
+    "MESS_NOT_AVAILABLE" => "Нет в наличии",
+    "META_DESCRIPTION" => "-",
+    "META_KEYWORDS" => "-",
+    "OFFERS_LIMIT" => "0",
+    "PARTIAL_PRODUCT_PROPERTIES" => "N",
+    "PRICE_CODE" => "",
+    "PRICE_VAT_INCLUDE" => "Y",
+    "PRICE_VAT_SHOW_VALUE" => "N",
+    "PRODUCT_ID_VARIABLE" => "id",
+    "PRODUCT_PROPERTIES" => "",
+    "PRODUCT_PROPS_VARIABLE" => "prop",
+    "PRODUCT_QUANTITY_VARIABLE" => "",
+    "PROPERTY_CODE" => "",
+    "SECTION_CODE" => "",
+    "SECTION_ID" => $section,
+    "SECTION_ID_VARIABLE" => "SECTION_ID",
+    "SECTION_URL" => "",
+    "SEF_MODE" => "N",
+    "SET_BROWSER_TITLE" => "Y",
+    "SET_CANONICAL_URL" => "N",
+    "SET_LAST_MODIFIED" => "N",
+    "SET_META_DESCRIPTION" => "Y",
+    "SET_META_KEYWORDS" => "Y",
+    "SET_STATUS_404" => "N",
+    "SET_TITLE" => "Y",
+    "SHOW_404" => "N",
+    "SHOW_DEACTIVATED" => "N",
+    "SHOW_PRICE_COUNT" => "1",
+    "TEMPLATE_THEME" => "blue",
+    "USE_COMMENTS" => "N",
+    "USE_ELEMENT_COUNTER" => "Y",
+    "USE_MAIN_ELEMENT_SECTION" => "N",
+    "USE_PRICE_COUNT" => "N",
+    "USE_PRODUCT_QUANTITY" => "N",
+    "USE_VOTE_RATING" => "N"
+        )
+);
+?>

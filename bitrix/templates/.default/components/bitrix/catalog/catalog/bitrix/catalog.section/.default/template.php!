@@ -1,0 +1,53 @@
+<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
+/** @var array $arParams */
+/** @var array $arResult */
+/** @global CMain $APPLICATION */
+/** @global CUser $USER */
+/** @global CDatabase $DB */
+/** @var CBitrixComponentTemplate $this */
+/** @var string $templateName */
+/** @var string $templateFile */
+/** @var string $templateFolder */
+/** @var string $componentPath */
+/** @var CBitrixComponent $component */
+$this->setFrameMode(true);
+?>
+<?php $cnt1 = 0; ?>
+<?php $cnt2 = count($arResult["ITEMS"]); ?>
+<?php foreach ($arResult["ITEMS"] as $item): ?>
+    <?php if ($cnt1 == 0): ?>
+        <div class="row">
+    <?php endif; ?>    
+        <?php $cnt1++; ?>          
+        <div class="col-xs-12 col-md-2 col-sm-2">
+            <div class="item">
+                <div class="outer">
+                    <a href="<?= $item["DETAIL_PAGE_URL"] ?>" class="holder">
+                        <?php if ($item["DETAIL_PICTURE"]["SRC"]): ?>
+                            <img src="<?= $item["DETAIL_PICTURE"]["SRC"] ?>" class="full-width" alt="">
+                        <?php else: ?>
+                            <img src="<?php echo SITE_TEMPLATE_PATH . '/images/nophoto.jpg' ?>" class="full-width" alt="">
+                        <?php endif; ?>   
+                    </a>
+                    <?php if ($item["PROPERTIES"]["discount"]["VALUE"]): ?>
+                        <div class="my-badge">
+                            <?= $item["PROPERTIES"]["discount"]["VALUE"] ?>
+                        </div>    
+                    <?php endif; ?>
+                    <div class="inner">
+                        <a href="#" data-toggle="modal" data-target=".modal-item" data-section="<?php echo $item["IBLOCK_SECTION_ID"]; ?>" data-item="<?php echo $item['ID']; ?>">БЫСТРЫЙ ПРОСМОТР</a>
+                    </div>
+                </div>
+                <div>
+                    <a href="<?= $item["DETAIL_PAGE_URL"] ?>"><p class="date text-center fiol"><?= $item["NAME"] ?></p></a>
+                    <p class="price text-center"><?= $item["PROPERTIES"]["price"]["~VALUE"] ?> &#8381;</p>
+                    <br>
+                </div>
+            </div>
+        </div>
+        <?php if ($cnt1 == 6 || $cnt2 == $cnt): ?>    
+        </div>
+        <?php $cnt1 = 0; ?>
+    <?php endif; ?>   
+<?php endforeach; ?>
+              

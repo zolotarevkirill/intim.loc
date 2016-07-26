@@ -1,0 +1,150 @@
+.header {
+	transition: @transition;
+	position: fixed;
+	z-index: 3;
+	left: 0;
+	width: 100%;
+	top: 0;
+	background: #91C9C6;
+	&.fix-header {
+		background: #91C9C6;
+		.logo {
+
+			top: -20px;
+			margin-bottom: -25px;
+			img {
+				margin-bottom: 0;
+				top: -50px;
+			}
+		}
+	}
+	&-lvl-1 {
+		padding: 10px 0;
+	}
+	&-lvl-2 {
+		padding: 10px 0;
+	}
+	.social {
+		font-size: 21px;
+		margin-top:15px;
+		a {
+			color: #fff;
+			text-decoration: none;
+			transform: translate3d(0,0,0);
+			transition: @transition;
+			will-change: translate3d;
+			display: inline-block;
+			&:hover,&:focus {
+				text-decoration: none;
+				transform: translate3d(0,-2px,0);
+			}
+		}
+		.icon-facebook {
+			margin-left: -8px;
+		}
+	}
+	.navbar.navbar-default {
+		margin-bottom: 0;
+		border:none;
+		border-radius: 0;
+		background: 0 0;
+	}
+	.trash {
+		margin-top:8px;
+		justify-content: flex-end;
+		align-items: center;
+		display: flex;
+		rect, polygon, polyline, circle, path {
+			fill: #6D9794;
+		}
+		p {
+			margin:0;
+			color: #fff;
+			font-weight: 400;
+			padding-right: 10px;
+			display: inline-block;
+			vertical-align: middle;
+			&:after {
+				content: '|';
+				color: #fff;
+				display: inline-block;
+				color: #fff;
+				margin-left: 10px;
+			}
+		}
+		svg {
+			width: 30px;
+		}
+		.quantity {
+			color: #fff;
+			fill: #fff;
+			.op;
+			font-size: 50px;
+			font-weight: 300;
+		}
+	}
+	.logo  {
+		text-align: center;
+		color: #fff;
+		transition: @transition;
+		position: relative;
+		top: 0;
+		img {
+			margin-bottom: 10px;
+			position: relative;
+			top: 0;
+			transition: @transition;
+		}
+		a {
+			display: block;
+			overflow: hidden;
+			&:hover,&:focus {
+				text-decoration: none;
+			}
+		}
+		p {
+			color: #fff;
+			margin-bottom: 0;
+		}
+		p:nth-child(2) {
+			font-weight: 700;
+			font-size: 21px;
+			text-transform: uppercase;
+		}
+	}
+	nav {
+		.navbar-collapse {
+			padding: 0;
+		}
+		.nav.navbar-nav {
+			&:after,&:before {
+				content: none;
+			}
+			li {
+				flex-grow: 1;
+				text-align: center;
+				a {
+					transition: @transition;
+					padding: 10px 15px;
+					font-size: 16px;
+					background: rgba(196, 228, 226, 1);
+					color:#6D9794;
+					&:hover,&:focus {
+						background: 0 0;
+						color: #fff;
+					}
+				}
+				&.active {
+					a {
+						background: 0 0;
+						color: #fff;
+					}
+				}
+			}
+			display: flex;
+			justify-content: space-between;
+			border: 1px solid #fff;
+			width: 100%;
+		}
+	}
+}

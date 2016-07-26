@@ -1,0 +1,55 @@
+Host: www.mysecretplace.ru
+Date: 2016-06-10 15:00:11
+Module: composite
+/var/www/webgold/data/www/mysecretplace.ru/bitrix/html_pages/www.mysecretplace.ru/anonimnost/index@.html.delete.1465560011.66
+    Bitrix\Main\Data\StaticHtmlCache::writeDebug < Bitrix\Main\Data\StaticHtmlCache::delete < Bitrix\Main\Page\Frame::processPageContent < Bitrix\Main\Page\Frame::endBuffering < CAllMain::EndBufferContent
+	/var/www/webgold/data/www/mysecretplace.ru/bitrix/modules/main/lib/data/statichtmlcache.php:166
+	/var/www/webgold/data/www/mysecretplace.ru/bitrix/modules/main/lib/page/frame.php:389
+	/var/www/webgold/data/www/mysecretplace.ru/bitrix/modules/main/lib/page/frame.php:337
+	/var/www/webgold/data/www/mysecretplace.ru/bitrix/modules/main/classes/general/main.php:3268
+	/var/www/webgold/data/www/mysecretplace.ru/bitrix/modules/main/classes/general/main.php:3204
+----------
+Host: www.mysecretplace.ru
+Date: 2016-06-10 15:00:14
+Module: composite
+/var/www/webgold/data/www/mysecretplace.ru/bitrix/html_pages/www.mysecretplace.ru/products/index@.html.delete.1465560014.0555
+    Bitrix\Main\Data\StaticHtmlCache::writeDebug < Bitrix\Main\Data\StaticHtmlCache::delete < Bitrix\Main\Page\Frame::processPageContent < Bitrix\Main\Page\Frame::endBuffering < CAllMain::EndBufferContent
+	/var/www/webgold/data/www/mysecretplace.ru/bitrix/modules/main/lib/data/statichtmlcache.php:166
+	/var/www/webgold/data/www/mysecretplace.ru/bitrix/modules/main/lib/page/frame.php:389
+	/var/www/webgold/data/www/mysecretplace.ru/bitrix/modules/main/lib/page/frame.php:337
+	/var/www/webgold/data/www/mysecretplace.ru/bitrix/modules/main/classes/general/main.php:3268
+	/var/www/webgold/data/www/mysecretplace.ru/bitrix/modules/main/classes/general/main.php:3204
+----------
+Host: www.mysecretplace.ru
+Date: 2016-06-10 15:00:14
+Module: composite
+/var/www/webgold/data/www/mysecretplace.ru/bitrix/html_pages/www.mysecretplace.ru/products/analnye-igrushki/index@.html.delete.1465560014.704
+    Bitrix\Main\Data\StaticHtmlCache::writeDebug < Bitrix\Main\Data\StaticHtmlCache::delete < Bitrix\Main\Page\Frame::processPageContent < Bitrix\Main\Page\Frame::endBuffering < CAllMain::EndBufferContent
+	/var/www/webgold/data/www/mysecretplace.ru/bitrix/modules/main/lib/data/statichtmlcache.php:166
+	/var/www/webgold/data/www/mysecretplace.ru/bitrix/modules/main/lib/page/frame.php:389
+	/var/www/webgold/data/www/mysecretplace.ru/bitrix/modules/main/lib/page/frame.php:337
+	/var/www/webgold/data/www/mysecretplace.ru/bitrix/modules/main/classes/general/main.php:3268
+	/var/www/webgold/data/www/mysecretplace.ru/bitrix/modules/main/classes/general/main.php:3204
+----------
+Host: www.mysecretplace.ru
+Date: 2016-06-10 15:00:20
+Module: composite
+/var/www/webgold/data/www/mysecretplace.ru/bitrix/html_pages/www.mysecretplace.ru/index@.html.delete.1465560020.5727
+    Bitrix\Main\Data\StaticHtmlCache::writeDebug < Bitrix\Main\Data\StaticHtmlCache::delete < Bitrix\Main\Page\Frame::processPageContent < Bitrix\Main\Page\Frame::endBuffering < CAllMain::EndBufferContent
+	/var/www/webgold/data/www/mysecretplace.ru/bitrix/modules/main/lib/data/statichtmlcache.php:166
+	/var/www/webgold/data/www/mysecretplace.ru/bitrix/modules/main/lib/page/frame.php:389
+	/var/www/webgold/data/www/mysecretplace.ru/bitrix/modules/main/lib/page/frame.php:337
+	/var/www/webgold/data/www/mysecretplace.ru/bitrix/modules/main/classes/general/main.php:3268
+	/var/www/webgold/data/www/mysecretplace.ru/bitrix/modules/main/classes/general/main.php:3204
+----------
+Host: www.mysecretplace.ru
+Date: 2016-06-10 15:02:05
+Module: composite
+/var/www/webgold/data/www/mysecretplace.ru/bitrix/html_pages/www.mysecretplace.ru/services/index@.html.delete.1465560125.457
+    Bitrix\Main\Data\StaticHtmlCache::writeDebug < Bitrix\Main\Data\StaticHtmlCache::delete < Bitrix\Main\Page\Frame::processPageContent < Bitrix\Main\Page\Frame::endBuffering < CAllMain::EndBufferContent
+	/var/www/webgold/data/www/mysecretplace.ru/bitrix/modules/main/lib/data/statichtmlcache.php:166
+	/var/www/webgold/data/www/mysecretplace.ru/bitrix/modules/main/lib/page/frame.php:389
+	/var/www/webgold/data/www/mysecretplace.ru/bitrix/modules/main/lib/page/frame.php:337
+	/var/www/webgold/data/www/mysecretplace.ru/bitrix/modules/main/classes/general/main.php:3268
+	/var/www/webgold/data/www/mysecretplace.ru/bitrix/modules/main/classes/general/main.php:3204
+----------

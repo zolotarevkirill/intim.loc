@@ -1,0 +1,5 @@
+.settings.php
+dbconn.php
+after_connect_d7.php
+after_connect.php
+/bitrix/backup/

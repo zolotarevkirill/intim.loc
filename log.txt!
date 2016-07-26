@@ -1,0 +1,76 @@
+Host: intmag.zolotarev-studio.ru
+Date: 2015-11-20 15:24:36
+Module: 
+SELECT `ID`, `NAME`, `CODE`
+					FROM b_iblock_section
+					WHERE IBLOCK_ID = '5' and ID >= '0' and (CODE = '' OR CODE IS NULL) ORDER BY `ID` ASC
+    CIMYIESectionsCHPURizator::UpdateCodes < require_once
+	/var/www/webgold/data/www/intmag.zolotarev-studio.ru/bitrix/modules/imyie.chpurizator/admin/index.php:34
+	/var/www/webgold/data/www/intmag.zolotarev-studio.ru/bitrix/admin/imyie_chpurizator.php:2
+----------
+Host: intmag.zolotarev-studio.ru
+Date: 2015-11-20 15:24:36
+Module: 
+Array
+(
+    [ID] => 161
+    [NAME] => АНАЛИТИЧЕСКАЯ КЛАССИФИКАЦИЯ
+    [CODE] => 
+)
+
+    CIMYIESectionsCHPURizator::UpdateCodes < require_once
+	/var/www/webgold/data/www/intmag.zolotarev-studio.ru/bitrix/modules/imyie.chpurizator/admin/index.php:34
+	/var/www/webgold/data/www/intmag.zolotarev-studio.ru/bitrix/admin/imyie_chpurizator.php:2
+----------
+Host: intmag.zolotarev-studio.ru
+Date: 2015-11-20 15:24:36
+Module: 
+Array
+(
+    [ID] => 245
+    [NAME] => СУВЕНИРЫ
+    [CODE] => 
+)
+
+    CIMYIESectionsCHPURizator::UpdateCodes < require_once
+	/var/www/webgold/data/www/intmag.zolotarev-studio.ru/bitrix/modules/imyie.chpurizator/admin/index.php:34
+	/var/www/webgold/data/www/intmag.zolotarev-studio.ru/bitrix/admin/imyie_chpurizator.php:2
+----------
+Host: intmag.zolotarev-studio.ru
+Date: 2015-11-20 15:24:36
+Module: 
+Array
+(
+    [ID] => 250
+    [NAME] => ФАЛЛОИМИТАТОРЫ
+    [CODE] => 
+)
+
+    CIMYIESectionsCHPURizator::UpdateCodes < require_once
+	/var/www/webgold/data/www/intmag.zolotarev-studio.ru/bitrix/modules/imyie.chpurizator/admin/index.php:34
+	/var/www/webgold/data/www/intmag.zolotarev-studio.ru/bitrix/admin/imyie_chpurizator.php:2
+----------
+Host: intmag.zolotarev-studio.ru
+Date: 2015-11-20 15:24:36
+Module: 
+Array
+(
+    [ID] => 300
+    [NAME] => УКРАШЕНИЯ ИНТИМНЫЕ
+    [CODE] => 
+)
+
+    CIMYIESectionsCHPURizator::UpdateCodes < require_once
+	/var/www/webgold/data/www/intmag.zolotarev-studio.ru/bitrix/modules/imyie.chpurizator/admin/index.php:34
+	/var/www/webgold/data/www/intmag.zolotarev-studio.ru/bitrix/admin/imyie_chpurizator.php:2
+----------
+Host: intmag.zolotarev-studio.ru
+Date: 2015-11-20 15:25:22
+Module: 
+SELECT `ID`, `NAME`, `CODE`
+					FROM b_iblock_section
+					WHERE IBLOCK_ID = '5' and ID >= '0' and (CODE = '' OR CODE IS NULL) ORDER BY `ID` ASC
+    CIMYIESectionsCHPURizator::UpdateCodes < require_once
+	/var/www/webgold/data/www/intmag.zolotarev-studio.ru/bitrix/modules/imyie.chpurizator/admin/index.php:34
+	/var/www/webgold/data/www/intmag.zolotarev-studio.ru/bitrix/admin/imyie_chpurizator.php:2
+----------
