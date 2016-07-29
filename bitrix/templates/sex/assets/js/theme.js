@@ -21,14 +21,14 @@ var superfishMenu = $('ul.sf-menu');
 var priceSliderRange = $('#slider-range');
 
 // Slide in/out with fade animation function
-jQuery.fn.slideFadeToggle  = function(speed, easing, callback) {
+jQuery.fn.slideFadeToggle = function (speed, easing, callback) {
     return this.animate({opacity: 'toggle', height: 'toggle'}, speed, easing, callback);
 };
 //
-jQuery.fn.slideFadeIn  = function(speed, easing, callback) {
+jQuery.fn.slideFadeIn = function (speed, easing, callback) {
     return this.animate({opacity: 'show', height: 'show'}, speed, easing, callback);
 };
-jQuery.fn.slideFadeOut  = function(speed, easing, callback) {
+jQuery.fn.slideFadeOut = function (speed, easing, callback) {
     return this.animate({opacity: 'hide', height: 'hide'}, speed, easing, callback);
 };
 
@@ -41,7 +41,7 @@ jQuery(document).ready(function () {
     // Sticky header/menu
     // ---------------------------------------------------------------------------------------
     if ($().sticky) {
-        $('.header.fixed').sticky({topSpacing:0});
+        $('.header.fixed').sticky({topSpacing: 0});
         //$('.header.fixed').on('sticky-start', function() { console.log("Started"); });
         //$('.header.fixed').on('sticky-end', function() { console.log("Ended"); });
     }
@@ -110,18 +110,18 @@ jQuery(document).ready(function () {
     // Add hover class for correct view on mobile devices
     // ---------------------------------------------------------------------------------------
     hover.hover(
-        function () {
-            $(this).addClass('hover');
-        },
-        function () {
-            $(this).removeClass('hover');
-        }
+            function () {
+                $(this).addClass('hover');
+            },
+            function () {
+                $(this).removeClass('hover');
+            }
     );
     // Sliders
     // ---------------------------------------------------------------------------------------
     if ($().owlCarousel) {
         var owl = $('.owl-carousel');
-        owl.on('changed.owl.carousel', function(e) {
+        owl.on('changed.owl.carousel', function (e) {
             // update prettyPhoto
             if ($().prettyPhoto) {
                 $("a[data-gal^='prettyPhoto']").prettyPhoto({
@@ -308,9 +308,9 @@ jQuery(document).ready(function () {
                 };
 
                 map = new google.maps.Map(document.getElementById('map-canvas'),
-                    mapOptions);
+                        mapOptions);
                 marker = new google.maps.Marker({
-                    position: new google.maps.LatLng(41.0096559,28.9755535), // marker coordinates
+                    position: new google.maps.LatLng(41.0096559, 28.9755535), // marker coordinates
                     map: map,
                     icon: image,
                     title: 'Hello World!'
@@ -332,35 +332,35 @@ jQuery(document).ready(function () {
                 }
             });
             $("#amount").val(
-                "$" + $("#slider-range").slider("values", 0) +
-                " - $" + $("#slider-range").slider("values", 1)
-            );
+                    "$" + $("#slider-range").slider("values", 0) +
+                    " - $" + $("#slider-range").slider("values", 1)
+                    );
         }
     }
     // Shop categories widget slide in/out
     // ---------------------------------------------------------------------------------------
     $('.shop-categories .arrow').click(
-        function () {
+            function () {
 
-            $(this).parent().parent().find('ul.children').removeClass('active');
-            $(this).parent().parent().find('.fa-angle-up').addClass('fa-angle-down').removeClass('fa-angle-up');
-            if ($(this).parent().find('ul.children').is(":visible")) {
-                //$(this).find('.fa-angle-up').addClass('fa-angle-down').removeClass('fa-angle-up');
-                //$(this).parent().find('ul.children').removeClass('active');
-            }
-            else {
-                $(this).find('.fa-angle-down').addClass('fa-angle-up').removeClass('fa-angle-down');
-                $(this).parent().find('ul.children').addClass('active');
-            }
-            $(this).parent().parent().find('ul.children').each(function () {
-                if (!$(this).hasClass('active')) {
-                    $(this).slideFadeOut();
+                $(this).parent().parent().find('ul.children').removeClass('active');
+                $(this).parent().parent().find('.fa-angle-up').addClass('fa-angle-down').removeClass('fa-angle-up');
+                if ($(this).parent().find('ul.children').is(":visible")) {
+                    //$(this).find('.fa-angle-up').addClass('fa-angle-down').removeClass('fa-angle-up');
+                    //$(this).parent().find('ul.children').removeClass('active');
                 }
                 else {
-                    $(this).slideFadeIn();
+                    $(this).find('.fa-angle-down').addClass('fa-angle-up').removeClass('fa-angle-down');
+                    $(this).parent().find('ul.children').addClass('active');
                 }
-            });
-        }
+                $(this).parent().parent().find('ul.children').each(function () {
+                    if (!$(this).hasClass('active')) {
+                        $(this).slideFadeOut();
+                    }
+                    else {
+                        $(this).slideFadeIn();
+                    }
+                });
+            }
     );
     $('.shop-categories ul.children').each(function () {
         if (!$(this).hasClass('active')) {
@@ -375,9 +375,9 @@ jQuery(window).load(function () {
     $('#preloader').delay(200).fadeOut(200);
     // Isotope
     if ($().isotope) {
-        isotopeContainer.isotope({ // initialize isotope
+        isotopeContainer.isotope({// initialize isotope
             itemSelector: '.isotope-item' // options...
-            //,transitionDuration: 0 // disable transition
+                    //,transitionDuration: 0 // disable transition
         });
         isotopeFiltrable.click(function () { // filter items when filter link is clicked
             var selector = $(this).attr('data-filter');
@@ -451,3 +451,37 @@ jQuery(window).scroll(function () {
         $('.header.fixed').sticky('update');
     }
 });
+
+
+$(document).ready(function () {
+    var btn_list_item = $("[data-triger='#listCart']");
+    var price = null;
+    var item = null;
+    UpdateCart(price, item);
+
+    $(btn_list_item).on('click', function () {
+        price = $(this).data('price');
+        item = $(this).data('item');
+        UpdateCart(price, item);
+    });
+});
+
+
+
+function UpdateCart(price, item) {
+    $.post("/include/getCart.php", {price: price, item: item}, function (data) {
+        var JsonData = JSON.parse(data);
+        var cnt = JsonData.CNT
+        var sum = JsonData.SUM
+
+        //Update Header Counter
+        
+        $("[data-header='counter']").text(cnt + ' товар(ов) - ' + sum + ' рублей');
+
+        //Update Header Cart
+
+
+    });
+
+
+}
